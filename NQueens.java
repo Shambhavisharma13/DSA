@@ -74,11 +74,12 @@ public class NQueens {
 
             for (int j = 0; j < n; j++) {
 
-                board[i][j] = '.';
+                board[i][j] = 'x';
 
             }
         }
 
         nQueens(board, 0);
+  
     }
 }
