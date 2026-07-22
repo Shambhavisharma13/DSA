@@ -42,6 +42,7 @@ The purpose of this repository is to:
 - ArrayList
 - Two Pointers
 - Prefix Sum
+- Two Sum
 
 ###  Linked Lists
 - Singly Linked List
