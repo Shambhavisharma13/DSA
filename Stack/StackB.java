@@ -2,57 +2,57 @@ import java.util.*;
 
 public class StackB {
 
-    static class Node {
-        int data;
-        Node next;
+    // static class Node {
+    //     int data;
+    //     Node next;
 
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
+    //     Node(int data) {
+    //         this.data = data;
+    //         this.next = null;
+    //     }
+    // }
 
-    static class Stack {
-        static Node head = null;
+    // static class Stack {
+    //     static Node head = null;
 
-        // Check if stack is empty
-        public static boolean isEmpty() {
-            return head == null;
-        }
+    //     // Check if stack is empty
+    //     public static boolean isEmpty() {
+    //         return head == null;
+    //     }
 
-        // Push operation
-        public static void push(int data) {
-            Node newNode = new Node(data);
+    //     // Push operation
+    //     public static void push(int data) {
+    //         Node newNode = new Node(data);
 
-            if (isEmpty()) {
-                head = newNode;
-                return;
-            }
+    //         if (isEmpty()) {
+    //             head = newNode;
+    //             return;
+    //         }
 
-            newNode.next = head;
-            head = newNode;
-        }
+    //         newNode.next = head;
+    //         head = newNode;
+    //     }
 
-        // Pop operation
-        public static int pop() {
-            if (isEmpty()) {
-                return -1;
-            }
+    //     // Pop operation
+    //     public static int pop() {
+    //         if (isEmpty()) {
+    //             return -1;
+    //         }
 
-            int top = head.data;
-            head = head.next;
-            return top;
-        }
+    //         int top = head.data;
+    //         head = head.next;
+    //         return top;
+    //     }
 
-        // Peek operation
-        public static int peek() {
-            if (isEmpty()) {
-                return -1;
-            }
+    //     // Peek operation
+    //     public static int peek() {
+    //         if (isEmpty()) {
+    //             return -1;
+    //         }
 
-            return head.data;
-        }
-    }
+    //         return head.data;
+    //     }
+    // }
 
    
           // static ArrayList<Integer>list=new ArrayList<>();
@@ -80,8 +80,9 @@ public class StackB {
           // }
       public static void main(String[] args) {
 
-        Stack s = new Stack();
+        // Stack s = new Stack();
 
+ Stack<Integer> s=new Stack<>();
         s.push(1);
         s.push(2);
         s.push(3);
