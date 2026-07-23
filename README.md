@@ -108,6 +108,7 @@ DSA
 -  Sorting
 -  Recursion
 -  Backtracking
+-  Stack(on going)
 
  More topics are being added regularly.
 
