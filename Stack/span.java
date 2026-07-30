@@ -1,5 +1,6 @@
 
 //This is offline stock span problem
+
 import java.util.*;
 public class span {
     public static void stockSpan(int stocks[],int span[]){
