@@ -81,7 +81,7 @@ The purpose of this repository is to:
 
 ---
 
-##  Repositoey Structure
+##  Repository Structure
 
 ```text
 DSA
