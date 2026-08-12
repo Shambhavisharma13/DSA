@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class BinaryTree {
     static class Node{
@@ -32,11 +31,20 @@ public class BinaryTree {
             preorder(root.left);
             preorder(root.right);
         }
+        public static void inorder(Node root){
+            if(root==null){
+                return;
+            }
+            inorder(root.left);
+            System.out.println(root.data+" ");
+            inorder(root.right);
+        }
     }
      public static void main(String args[]){
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree1 tree=new BinaryTree1();
         Node root=tree.buildTree(nodes);
-      tree.preorder(root);
+    //  tree.preorder(root);
+    tree.inorder(root);
      }
 }
