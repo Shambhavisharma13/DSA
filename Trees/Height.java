@@ -18,6 +18,15 @@ public class Height{
 
         return 1+ Math.max(lh,rh);
     }
+    public static int count(Node root){
+        if(root==null){
+            return 0;
+        }
+        int leftcount=count(root.left);
+        int rightcount=count(root.right);
+
+        return 1+leftcount+rightcount;
+    }
     public static void main(String args[]){
        
     Node root=new Node(1);
@@ -28,5 +37,6 @@ public class Height{
     root.right.left=new Node(6);
     root.right.right=new Node(7);
     System.out.println(height(root));
+    System.out.println(count(root));
     }
 }
