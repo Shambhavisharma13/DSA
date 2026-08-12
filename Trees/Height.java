@@ -27,6 +27,14 @@ public class Height{
 
         return 1+leftcount+rightcount;
     }
+    public static int sum(Node root){
+        if(root==null){
+            return 0;
+        }
+        int leftsum=sum(root.left);
+        int rightsum=sum(root.right);
+        return leftsum+rightsum+root.data;
+    }
     public static void main(String args[]){
        
     Node root=new Node(1);
@@ -38,5 +46,6 @@ public class Height{
     root.right.right=new Node(7);
     System.out.println(height(root));
     System.out.println(count(root));
+    System.out.println(sum(root));
     }
 }
