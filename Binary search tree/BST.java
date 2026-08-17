@@ -32,6 +32,19 @@ public static void inorder(Node root){
     System.out.print(root.data +" ");
     inorder(root.right);
 }
+public static boolean search(Node root,int key){
+    if(root==null){
+        return false;
+    }
+    if(root.data==key){
+        return true;
+    }
+    if(root.data>key){
+      return  search(root.left,key);
+    }else{
+        return search(root.right,key);
+    }
+}
 
 
     public static void main(String args[]){
@@ -42,6 +55,12 @@ public static void inorder(Node root){
             root=insert(root,values[i]);
         }
         inorder(root);
+        System.out.println();
+        if(search(root,8)){
+            System.out.println("found");
+        }else{
+            System.out.println("Not found");
+        }
 
     }
 }
