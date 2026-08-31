@@ -108,7 +108,11 @@ DSA
 -  Sorting
 -  Recursion
 -  Backtracking
--  Stack(on going)
+-  Stack
+-  Queue
+-  Tree
+-  Binary search tree
+-  Graph(on going)
 
  More topics are being added regularly.
 
