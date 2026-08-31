@@ -40,7 +40,7 @@ public  class BFS{//O(n)
     graph[5].add(new Edge(5,3,1));
     graph[5].add(new Edge(5,4,1));
     graph[5].add(new Edge(5,6,1));
-    graph[5].add(new Edge(6,5,1));
+    graph[5].add(new Edge(5,5,1));
 
  }
  public static void bfs(ArrayList<Edge>[] graph){
@@ -60,12 +60,27 @@ public  class BFS{//O(n)
         }
     }
  }
+ public static void dfs(ArrayList<Edge>[] graph, int curr, boolean vis[]) {
+
+    System.out.print(curr + " ");
+    vis[curr] = true;
+
+    for (int i = 0; i < graph[curr].size(); i++) {
+
+        Edge e = graph[curr].get(i);
+
+        if (!vis[e.dest]) {
+            dfs(graph, e.dest, vis);
+        }
+    }
+}
     public static void main(String args[]){
              int v=7;
              //int arr[]=new arr[v];
          ArrayList<Edge>[] graph=new ArrayList[v];//null
      
  createGraph(graph);
- bfs(graph);
+ //bfs(graph);
+ dfs(graph,0,new boolean[v]);
   }
 }
