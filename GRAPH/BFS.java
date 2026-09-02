@@ -74,6 +74,29 @@ public  class BFS{//O(n)
         }
     }
 }
+
+public static boolean hasPath(ArrayList<Edge>[] graph,
+                              int src,
+                              int dest,
+                              boolean[] vis) {
+
+    if (src == dest) {
+        return true;
+    }
+
+    vis[src] = true;
+
+    for (int i = 0; i < graph[src].size(); i++) {
+
+        Edge e = graph[src].get(i);
+
+        if (!vis[e.dest] && hasPath(graph, e.dest, dest, vis)) {
+            return true;
+        }
+    }
+
+    return false;
+}
     public static void main(String args[]){
              int v=7;
              //int arr[]=new arr[v];
@@ -82,5 +105,7 @@ public  class BFS{//O(n)
  createGraph(graph);
  //bfs(graph);
  dfs(graph,0,new boolean[v]);
+
+ System.out.println(hasPath(graph,0,6,new boolean[v]));
   }
 }
