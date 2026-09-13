@@ -50,7 +50,7 @@ public class Prims{
   public static void prims(ArrayList<Edge> graph[]){
     boolean vis[]=new boolean[graph.length];
     PriorityQueue<Pair> pq=new PriorityQueue<>();
-    p.add(new Pair(0,0));
+    pq.add(new Pair(0,0));
     int finalCost=0;//mst cost/total min wweight
 
     while(!pq.isEmpty()){
