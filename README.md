@@ -112,7 +112,8 @@ DSA
 -  Queue
 -  Tree
 -  Binary search tree
--  Graph(on going)
+-  Graph
+-  Dynamic Programming(on going)
 
  More topics are being added regularly.
 
