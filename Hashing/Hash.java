@@ -9,6 +9,8 @@ public class Hash {
          hm.put("India",100);
          hm.put("China",150);
          hm.put("US",50);
+         hm.put("Indonesia",6);
+         hm.put("Neapl",5);
 
          System.out.println(hm);
 
